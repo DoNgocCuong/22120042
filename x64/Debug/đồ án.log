@@ -1,0 +1,3 @@
+﻿  function.cpp
+D:\đồ án ktlt\đồ án\đồ án\function.cpp(347,53): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+  đồ án.vcxproj -> D:\đồ án ktlt\đồ án\x64\Debug\đồ án.exe
