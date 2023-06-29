@@ -2,6 +2,9 @@
 #include<iostream>
 #include<fstream>
 #include<string.h>
+#include<cstring>
+#include<stdlib.h>
+#include<windows.h>
 #define max 100
 using namespace std;
 struct Login {
@@ -58,6 +61,11 @@ struct year {
 
 
 
+void Init_hk(year*& head);
+void nhapdsMH(monhoc*& head, char file[]);
+void Init_class(year*& head);
+void newclass(dslop*& head, char* ten);
+void read_file_dslop(dslop*& head);
 int newlogin(Login *headsv,Login *headgv);
 bool check(Login* head, int mssv);
 int dangnhap(Login* head);
@@ -81,7 +89,37 @@ int dem(char file[]);
 void them1svmh(ttsv*& head, ttsv* x);
 void nhapds(ttsv*& head, char file[]);
 monhoc* newmonhoc();
+void themmonhoc1(monhoc*& head, monhoc* newNode);
 void themmonhoc(monhoc*& head);
 hocki* newhk();
 void them1hocki(hocki*& head);
+void them1hocki(hocki*& head, hocki* newNode);
 void Xuat(ttsv* head);
+void xoa1sv(thongtinsv*& head, int mssv);
+void see_class_list(dslop* head);
+void noichuoi(char a[], char b[]);
+void see_list_of_subjects(hocki* head, int x);
+void see_the_list_of_students_of_all_subjects(hocki* head, int x);
+void see_the_list_of_students_in_class(dslop* head);
+void pop_student(dslop* head);
+void popclass(dslop*& head);
+void popsubject(monhoc*& head);
+dslop* newlop();
+void pop_student(dslop* head);
+void push_student(dslop *& head);
+void themsvmh(ttsv*& head, ttsv* newNode);
+void push_student_subject(monhoc*& head);
+void pop_student_subject(monhoc*& head);
+void output_the_resul_file(monhoc* head);
+void update_subject_scores(monhoc*& head);
+void take_a_look_at_the_score(hocki* head);
+void see_my_list_of_subjects(monhoc* head, int mssv);
+void see_class_grades(year* head);
+void duyetdiem(ttsv* head, int mssv);
+void read_file_subject(monhoc* head);
+void write_student_subject(ttsv* head, char file[]);
+void write_student_class(thongtinsv* head, char file[]);
+void write_file_class(dslop* head);
+void push_class(dslop*& head);
+void write_file_password(Login* head, char file[]);
+void textColor(int a);
