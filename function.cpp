@@ -179,27 +179,28 @@ void MENUsv() {
 }
 void MENUgv() {
     textColor(10);
-    cout << "===============================================================================" << endl;
-    cout << "=                   LUA CHON CUA THAY CO LA GI                                =" << endl;
-    cout << "=                      1/xem danh sach cac lop                                =" << endl;
-    cout << "=                      2/xem danh sach hoc sinh trong lop                     =" << endl;
-    cout << "=                      3/xem danh sach cac mon hoc                            =" << endl;
-    cout << "=                      4/xem  danh sach hoc sinh trong moi mon hoc            =" << endl;
-    cout << "=                      5/xuat danh sach sinh vien trong khoa hoc ra file csv  =" << endl;
-    cout << "=                      6/cap nhap diem mon hoc                                =" << endl;
-    cout << "=                      7/xem ket qua 1 mon hoc                                =" << endl;
-    cout << "=                      8/xem ket qua 1 lop hoc                                =" << endl;
-    cout << "=                      9/tao them mon hoc                                     =" << endl;
-    cout << "=                      10/ them 1 lop                                         =" << endl;
-    cout << "=                      11/xoa 1 lop hoc                                       =" << endl;
-    cout << "=                      12/xoa mot mon hoc                                     =" << endl;
-    cout << "=                      13/them 1 sinh vien vao khoa hoc                       =" << endl;
-    cout << "=                      14/xoa 1 sinh vien ra khoi khoa hoc                    =" << endl;
-    cout << "=                      15/them sinh vien vao 1 lop                            =" << endl;
-    cout << "=                      16/xoa sinh vien ra khoi lop                           =" << endl;
-    cout << "=                      17/doi mat khau                                        =" << endl;
-    cout << "=                      18/thoat                                               =" << endl;
-    cout << "===============================================================================" << endl;
+    cout << endl << endl << endl << endl;
+    cout << "                    ===============================================================================" << endl;
+    cout << "                    =                   LUA CHON CUA THAY CO LA GI                                =" << endl;
+    cout << "                    =                      1/xem danh sach cac lop                                =" << endl;
+    cout << "                    =                      2/xem danh sach hoc sinh trong lop                     =" << endl;
+    cout << "                    =                      3/xem danh sach cac mon hoc                            =" << endl;
+    cout << "                    =                      4/xem  danh sach hoc sinh trong moi mon hoc            =" << endl;
+    cout << "                    =                      5/xuat danh sach sinh vien trong khoa hoc ra file csv  =" << endl;
+    cout << "                    =                      6/cap nhap diem mon hoc                                =" << endl;
+    cout << "                    =                      7/xem ket qua 1 mon hoc                                =" << endl;
+    cout << "                    =                      8/xem ket qua 1 lop hoc                                =" << endl;
+    cout << "                    =                      9/tao them mon hoc                                     =" << endl;
+    cout << "                    =                      10/ them 1 lop                                         =" << endl;
+    cout << "                    =                      11/xoa 1 lop hoc                                       =" << endl;
+    cout << "                    =                      12/xoa mot mon hoc                                     =" << endl;
+    cout << "                    =                      13/them 1 sinh vien vao khoa hoc                       =" << endl;
+    cout << "                    =                      14/xoa 1 sinh vien ra khoi khoa hoc                    =" << endl;
+    cout << "                    =                      15/them sinh vien vao 1 lop                            =" << endl;
+    cout << "                    =                      16/xoa sinh vien ra khoi lop                           =" << endl;
+    cout << "                    =                      17/doi mat khau                                        =" << endl;
+    cout << "                    =                      18/thoat                                               =" << endl;
+    cout << "                    ===============================================================================" << endl;
     textColor(12);
     cout << "nhap su lua chon cua thay co:";
 }
@@ -416,8 +417,6 @@ int  doi(char a[]) {
     }
     return tmp;
 }
-
-
 void them1lop(dslop*& head, dslop*x) {
     if (head == NULL) {
         head = x;
@@ -441,7 +440,6 @@ void push_class(dslop*& head) {
 /*XONG PHAN TAO NAM HOC*/
 /*TAO CAC MON HOC TRONG NAM  VA TAI DANH SACH CAC SINH VIEN TRONG TUNG KHOA HOC*/
 ///////////////////////////////////////////////////////////////////////////////////////////
-
 monhoc* newmonhoc() {
     monhoc* newNode;
     newNode = new monhoc;
@@ -636,7 +634,6 @@ void pop_student_subject(monhoc*& head) {
     delete pop; 
     write_student_subject(tmp->ttsv, tmp->tenmh);
 }
-
 ////////////////////////////////////
 /// THEM sv vao 1 lop//////////////////
 void push_student(dslop*& head) {
@@ -1048,7 +1045,6 @@ void update_subject_scores(monhoc*& head) {
 }/////////////XEM DANH SACH CAC MON HOC CUA SINH VIEN///////////
 void see_my_list_of_subjects(monhoc* head,int mssv) {
     textColor(10);
-    cout << endl << endl << endl << endl << endl;
     cout << "id         " << "ten mon hoc     " << "ten giao vien    " << "ten lop   " << "so tin chi    " << "thoi gian hoc   " << "diem gk   " << "diem ck   " << "diem tong    " << endl;
     textColor(7);
     while (head != NULL) {
