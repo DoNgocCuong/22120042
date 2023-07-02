@@ -1,7 +1,7 @@
 ﻿  function.cpp
 D:\đồ án ktlt\đồ án\đồ án\thuvien.h(8,1): warning C4005: 'max': macro redefinition
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(193,1): message : see previous definition of 'max'
+D:\đồ án ktlt\đồ án\đồ án\function.cpp(931,19): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 D:\đồ án ktlt\đồ án\đồ án\function.cpp(932,19): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-D:\đồ án ktlt\đồ án\đồ án\function.cpp(933,19): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-D:\đồ án ktlt\đồ án\đồ án\function.cpp(1026,65): warning C4101: 'tmp7': unreferenced local variable
+D:\đồ án ktlt\đồ án\đồ án\function.cpp(1025,65): warning C4101: 'tmp7': unreferenced local variable
   đồ án.vcxproj -> D:\đồ án ktlt\đồ án\x64\Debug\đồ án.exe

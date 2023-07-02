@@ -202,7 +202,7 @@ void MENUgv() {
     cout << "                    =                      18/thoat                                               =" << endl;
     cout << "                    ===============================================================================" << endl;
     textColor(12);
-    cout << "nhap su lua chon cua thay co:";
+    cout << "                                         nhap su lua chon cua thay co:";
 }
 //kiem tra tai khoan mat khau co ton tai khong
 bool check(Login* head, int mssv,int mk) {
@@ -360,7 +360,6 @@ dslop* newlop() {
     newNode->next = NULL;
     return newNode;
 }
-
 //them nam moi
 year* newyear() {
     year *newNode = new year;

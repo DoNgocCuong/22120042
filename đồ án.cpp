@@ -20,7 +20,9 @@ int main() {
     int n, a, b, tmp; cout << "                             Nhap lua chon cua ban:";  textColor(7); cin >> n;
     //tmp la ma so sinh vien hoac ma so giao vien vua dang nhap
     while (n > 2 || n < 0) {
+        textColor(12);
         cout << "lua chon khong hop le vui long nhap lai:";
+        textColor(7);
         cin >> n;
     }
     system("cls");
