@@ -57,10 +57,6 @@ struct year {
 	hocki *hk;
 	year* next;
 };
-
-
-
-
 void Init_hk(year*& head);
 void nhapdsMH(monhoc*& head, char file[]);
 void Init_class(year*& head);
