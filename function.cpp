@@ -181,7 +181,7 @@ void MENUgv() {
     textColor(10);
     cout << endl << endl << endl << endl;
     cout << "                    ===============================================================================" << endl;
-    cout << "                    =                   LUA CHON CUA THAY CO LA GI                                =" << endl;
+    cout << "                    =                         LUA CHON CUA THAY CO LA GI                                =" << endl;
     cout << "                    =                      1/xem danh sach cac lop                                =" << endl;
     cout << "                    =                      2/xem danh sach hoc sinh trong lop                     =" << endl;
     cout << "                    =                      3/xem danh sach cac mon hoc                            =" << endl;
@@ -202,7 +202,7 @@ void MENUgv() {
     cout << "                    =                      18/thoat                                               =" << endl;
     cout << "                    ===============================================================================" << endl;
     textColor(12);
-    cout << "                                         nhap su lua chon cua thay co:";
+    cout << "                                         Nhap su lua chon cua thay co:";
 }
 //kiem tra tai khoan mat khau co ton tai khong
 bool check(Login* head, int mssv,int mk) {
@@ -880,12 +880,12 @@ void see_the_list_of_students_of_all_subjects(hocki* head,int x) {
 void take_a_look_at_the_score(hocki* head) {
     int dem = 0;
     textColor(12);
-    cout << "nhap hoc ki ma cac thay co muon xem:";
+    cout << "nhap hoc ki ma cac thay co muon xem ket qua:";
     textColor(7);
     int x; cin >> x;
     while (x > 3 || x < 0) {
         textColor(12);
-        cout << "hoc ki thay co nhap khong hop le vui long nhap lai:";
+        cout << "hoc ki thay co tim kiem khong hop le vui long nhap lai:";
         textColor(7);
         cin >> x;
     }
@@ -898,7 +898,7 @@ void take_a_look_at_the_score(hocki* head) {
     hocki* tmp = head;
     system("cls");
     textColor(10);
-    cout << "                            danh sach cac sinh vien cua mon " << tmp1 << " la:" << endl;
+    cout << "                            danh sach sinh vien cua mon " << tmp1 << " la:" << endl;
     textColor(7);
     while (tmp != NULL) {
         if (tmp->hk == x) {
@@ -916,7 +916,7 @@ void take_a_look_at_the_score(hocki* head) {
     }
     if (dem == 0) {
         textColor(12);
-        cout << "mon hoc thay co tim kiem khong co:" << endl;
+        cout << "mon hoc thay co tim kiem hien khong ton tai:" << endl;
         return;
     }
     ttsv* tail = last->ttsv;
