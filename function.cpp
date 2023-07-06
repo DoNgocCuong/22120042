@@ -90,7 +90,6 @@ void nhapdsMH(monhoc*& head, char file[]) {
     read.close();
     
 }
-
 void nhapds(ttsv*& head, char file[]) {
     ifstream read(file, ios::in);
     if (read.is_open()) {
@@ -181,7 +180,7 @@ void MENUgv() {
     textColor(10);
     cout << endl << endl << endl << endl;
     cout << "                    ===============================================================================" << endl;
-    cout << "                    =                         LUA CHON CUA THAY CO LA GI                                =" << endl;
+    cout << "                    =                         LUA CHON CUA THAY CO LA GI                          =" << endl;
     cout << "                    =                      1/xem danh sach cac lop                                =" << endl;
     cout << "                    =                      2/xem danh sach hoc sinh trong lop                     =" << endl;
     cout << "                    =                      3/xem danh sach cac mon hoc                            =" << endl;
@@ -220,6 +219,7 @@ bool check(Login* head, int mssv,int mk) {
         return false;
     }
 }
+
 int dangnhap(Login* head) {
     int mssv, mk;
     cout << endl << endl << endl << endl << endl;
@@ -614,7 +614,6 @@ void pop_student_subject(monhoc*& head) {
     textColor(7);
     cin.ignore();
     cin.getline(name, max);
-    cout << name << endl; 
     ttsv* tail = tmp->ttsv;
     while (tail != NULL) {
         if (strcmp(tail->next->ten, name) == 0 && tail->next->mssv == mssv) {
@@ -628,9 +627,11 @@ void pop_student_subject(monhoc*& head) {
         cout << "sinh vien thay co vua nhap hien khong co" << endl;
         return;
     }
-    ttsv* pop = tail->next;
-    tail->next = pop->next;
-    delete pop; 
+    if (tail->next != NULL) {
+        ttsv* pop = tail->next;
+        tail->next = pop->next;
+        delete pop;
+    }
     write_student_subject(tmp->ttsv, tmp->tenmh);
 }
 ////////////////////////////////////
@@ -743,9 +744,11 @@ void popclass(dslop*& head) {
     while (strcmp(tmp1->next->tenlop, tmp) != 0) {
         tmp1 = tmp1->next;
     }
-    dslop* tmp2 = tmp1->next;
-    tmp1->next = tmp2->next;
-    delete tmp2;
+    if (tmp1->next == NULL) {
+        dslop* tmp2 = tmp1->next;
+        tmp1->next = tmp2->next;
+        delete tmp2;
+    }
     dslop* tail = head;
     write_file_class(tail);
 }
@@ -1156,7 +1159,6 @@ void write_student_class(thongtinsv* head,char file[]) {
     char link1[max] = ".CSV";
     noichuoi(link, file);
     noichuoi(link, link1);
-    cout <<  link << endl;
     ofstream write(link, ios::out);
     if (!write.is_open()) {
         cout << "file khong duoc mo" << endl;
@@ -1185,7 +1187,7 @@ void write_file_class(dslop* head) {
     }
     write.close();
 }
-////////////////////////hHAM VIET LAI FILE DOI MK GIAO VIEN
+//////////////////////HAM VIET LAI FILE DOI MK GIAO VIEN
 void write_file_password(Login *head,char file[]) {
     Login* tmp = head;
     int dem = 0;
